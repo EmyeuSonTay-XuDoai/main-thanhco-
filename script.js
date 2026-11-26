@@ -395,7 +395,18 @@ const lightboxCaption =
 
 const closeLightboxButton =
     document.getElementById("closeLightbox");
+document.querySelectorAll(".tab-button").forEach(button => {
+    button.addEventListener("click", function () {
 
+        // Xóa trạng thái active ở tất cả các mục
+        document.querySelectorAll(".tab-button").forEach(item => {
+            item.classList.remove("active");
+        });
+
+        // Đổi màu mục vừa được bấm
+        this.classList.add("active");
+    });
+});
 
 /* =========================================
    3. HÀM HIỂN THỊ NỘI DUNG LỊCH SỬ
