@@ -1,0 +1,619 @@
+
+:root {
+    --green: #7f5822;
+    --green-light: #65442f;
+    --gold: #bd9859;
+    --cream: #f7f3e9;
+    --brown: #654832;
+    --text: #34342e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+}
+
+
+
+
+
+/* ===== HERO BANNER ===== */
+/* ===== BANNER PC VÀ MOBILE ===== */
+
+.hero {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.hero-picture {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-picture img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ===== MÀN HÌNH PC ===== */
+@media (min-width: 769px) {
+    .hero-picture img {
+        width: 10%;
+        height: 600px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+/* ===== MÀN HÌNH MOBILE ===== */
+@media (max-width: 768px) {
+    .hero-picture img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+/* PC: giữ nguyên ảnh gốc */
+.poster-frame {
+    width: 100%;
+    overflow: hidden;
+}
+
+.poster-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* MOBILE: loại bỏ khoảng trắng phía dưới */
+@media screen and (max-width: 600px) {
+
+    .poster-frame {
+        width: 100%;
+        aspect-ratio: 460 / 243;
+        overflow: hidden;
+    }
+
+    .poster-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+}
+
+/* ===== NÚT KHÁM PHÁ ===== */
+
+.hero-content {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #8b1e16;
+    color: #fff3cf;
+    border: 2px solid #e6bd68;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== MOBILE ===== */
+
+@media screen and (max-width: 768px) {
+    .hero-content {
+        bottom: 5px;
+    }
+
+    .main-button {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.section-label {
+    color: #8F0806;;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    color: #8F0806;;
+}
+
+.title-line {
+    width: 65px;
+    height: 3px;
+    background: #8F0806;
+    margin: 22px auto;
+}
+
+.intro {
+    background: #fffdf8;
+}
+
+.intro-text {
+    max-width: 850px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 2;
+    color: #666;
+}
+
+.section-description {
+    margin: 15px 0 45px;
+    color: #777;
+}
+
+/* HERITAGE CARDS */
+
+.heritage {
+    background: var(--cream);
+}
+
+.heritage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+.heritage-card {
+    background: white;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px #0000000d;
+    cursor: pointer;
+    transition: .35s;
+}
+
+.heritage-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px #0002;
+}
+
+.card-image {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.heritage-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #8F0806;
+    color: white;
+    padding: 8px 13px;
+    font-size: 13px;
+}
+
+.card-content {
+    padding: 25px 20px;
+}
+
+.card-category {
+    color: #8F0806;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.card-content h3 {
+    color: #8F0806;;
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin: 12px 0;
+}
+
+.card-content > p:not(.card-category) {
+    color: #777;
+    line-height: 1.7;
+    font-size: 14px;
+    min-height: 70px;
+}
+
+.explore-link {
+    display: inline-block;
+    color: var(--brown);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 18px;
+}
+
+/* QUOTE */
+
+.quote-section {
+    background: #8F0806;;
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.quote-section p img {
+    max-width: 380px; /* Giới hạn chiều rộng tối đa của ảnh (bạn có thể thay đổi số này tùy ý) */
+    height: auto;     /* Giữ tỷ lệ gốc của ảnh */
+    display: inline-block;
+}
+.quote-section p {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 4vw, 32px);
+    font-style: italic;
+}
+
+.quote-section span {
+    display: block;
+    margin-top: 20px;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #e6c58a;
+}
+
+/* DETAIL PAGE */
+
+.hidden {
+    display: none !important;
+}
+
+.detail-banner {
+    min-height: 350px;
+    background:
+        linear-gradient(#ffe0c6, #1c3028b8),
+        url('./canh_sac_va_con_nguoi.jpg')
+        center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+}
+
+.detail-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 6vw, 55px);
+    margin: 15px 0;
+}
+
+.detail-banner p:last-child {
+    color: #eee;
+    line-height: 1.8;
+}
+
+.detail-container {
+    padding: 55px 8%;
+}
+
+.back-button {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--brown);
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 40px;
+    transition: .3s;
+}
+
+.back-button:hover {
+    background: var(--gold);
+    color: white;
+}
+
+.detail-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.detail-menu {
+    background: white;
+    padding: 25px;
+    position: sticky;
+    top: 110px;
+    box-shadow: 0 5px 20px #0001;
+}
+
+.detail-menu h3 {
+    color: #8F0806;;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.detail-menu a {
+    display: block;
+    padding: 13px 0;
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.detail-menu a:hover {
+    color: var(--gold);
+    padding-left: 8px;
+}
+
+.detail-content {
+    background: white;
+    padding: 35px;
+    min-width: 0;
+}
+
+.detail-content section {
+    margin-bottom: 45px;
+    scroll-margin-top: 110px;
+}
+
+.detail-content h2 {
+    color: #8F0806;;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.detail-content p {
+    line-height: 1.9;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.detail-content img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    margin: 15px 0;
+}
+
+.fact-box {
+    background: #f5f0e4;
+    border-left: 4px solid #8F0806;
+    padding: 20px;
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 6%;
+    box-sizing: border-box;
+    background:  #8F0806;
+    color: rgb(255, 255, 255);
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer {
+        padding: 18px 15px;
+        gap: 10px;
+    }
+
+    .footer h3 {
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+}
+
+/* TOP BUTTON */
+
+#topButton {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    border: none;
+    border-radius: 50%;
+    background: #8F0806;
+    color: white;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    z-index: 90;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .heritage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        padding: 0 4%;
+    }
+}
+
+/* HIỂN THỊ ẢNH ĐẦY ĐỦ TRÊN ĐIỆN THOẠI */
+@media (max-width: 768px) {
+    .heritage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: auto !important;
+        overflow: hidden;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: auto !important;
+        object-fit: contain !important;
+        display: block;
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        height: auto;
+        min-height: 80px;
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 50px 7%;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .heritage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 240px;
+    }
+
+    .detail-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .detail-menu {
+        position: static;
+    }
+
+    .detail-container {
+        padding: 35px 5%;
+    }
+
+    .detail-content {
+        padding: 22px;
+    }
+
+    .detail-banner {
+        min-height: 280px;
+    }
+}
+/* ===== BANNER PC VÀ MOBILE ===== */
+
+.hero {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.hero-picture {
+    display: block;
+    width: 100%;
+}
+
+.hero-picture img {
+    display: block;
+    width: 100%;
+    height:50% ;
+}
+
+
+
+/* ===== MOBILE ===== */
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-picture img {
+        width: 100%;
+        height: auto;
+    }
+
+
+}
